@@ -30,6 +30,10 @@ for (var i = 0; i < bahan.length; i++) {
 
 let jumlah = [];
 
+// for (var i = 0; i < newBahan.length; i++) {
+//   jumlah.push(newBahan[i].split(' : '))
+// }
+
 for (var i = 0; i < newBahan.length; i++) {
   let arr = []
   jumlah.push(arr);
