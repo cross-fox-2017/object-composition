@@ -71,7 +71,7 @@ class CookiesFactory {
 }
 
 let batch_of_cookies = CookiesFactory.create('cookies.txt');
-// console.log(batch_of_cookies);
+console.log(batch_of_cookies);
 
 let tuesdayFoods = CookiesFactory.cookieRecommendation("tuesday", batch_of_cookies);
 // console.log(`Cookies that has sugar in it: ${JSON.stringify(tuesdayFoods)}`);
