@@ -98,10 +98,24 @@ class CookieFactory {
     }
 
     static cookieRecommendation(day, batch_of_cookies) {
-
-
+        var recomendasi = []
+        for (var i = 0; i < batch_of_cookies.length; i++) {
+            var status = true;
+            for (var j = 0; j < batch_of_cookies[i].ingredient.length; j++) {
+                if (batch_of_cookies[i].ingredient[j].name == "sugar") {
+                    status = false;
+                    break;
+                }
+            }
+            if(status == true){
+              recomendasi.push(batch_of_cookies[i])
+            }
+        }
+        return recomendasi
     }
+
 }
+
 
 
 
@@ -111,5 +125,5 @@ console.log(batch_of_cookies);
 let tuesdayFoods = CookieFactory.cookieRecommendation("tuesday", batch_of_cookies);
 console.log("food for tuesday is :");
 for (let i = 0; i < tuesdayFoods.length; i++) {
-    console.log(tuesdayFoods[i].name);
+    console.log(tuesdayFoods[i].nama);
 }
