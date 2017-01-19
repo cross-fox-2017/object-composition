@@ -55,13 +55,6 @@ class CookieFactory{
     this.product = [];
     this.sugarCek = [];
   }
-  processFile(){
-    for (let i = 0; i < this.file.length; i++){
-      this.file[i] = this.file[i].trim().split(" = ")
-      this.file[i][1] = this.file[i][1].trim().split(", ")
-    }
-    return this.options = this.file
-  }
   createFromList(){
     let production = []
     for (let i = 0; i < this.file.length; i++){
@@ -101,7 +94,6 @@ class CookieFactory{
     }
     return `This Product ${this.sugarCek} has sugar on it, Not Recomended`
   }
-
 }
 
 let fact = new CookieFactory('recipes.txt')
